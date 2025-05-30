@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TECHNOX | Buy Now Pay Later</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="landingPage">
+    <header>
+      <h1>TECHNOX</h1>
+      <p class="sub-heading">
+        BUY NOW PAY LATER!<br />
+        <span>Purchase an item on easy buy, pay 60% for any item and pay gradually</span>
+      </p>
+    </header>
+
+    <main class="product-container">
+      <div class="product">
+        <img src="images/ipad-mini-4.jpg" alt="iPad Mini 4" />
+        <h2>Apple iPad Mini 4</h2>
+        <p>₦105,000</p>
+        <button onclick="buy('Apple iPad Mini 4', 105000)">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <img src="images/ipad-mini-7.jpg" alt="iPad Mini 7" />
+        <h2>iPad Mini 7 (512GB)</h2>
+        <p>₦524,000</p>
+        <button onclick="buy('iPad Mini 7', 524000)">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <img src="images/iphone-11-pro-max.jpg" alt="iPhone 11 Pro Max" />
+        <h2>iPhone 11 Pro Max (256GB)</h2>
+        <p>₦350,000</p>
+        <button onclick="buy('iPhone 11 Pro Max', 350000)">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <img src="images/iphone-14-pro-max.jpg" alt="iPhone 14 Pro Max" />
+        <h2>iPhone 14 Pro Max</h2>
+        <p>₦980,000</p>
+        <button onclick="buy('iPhone 14 Pro Max', 980000)">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <img src="images/iphone-16.jpg" alt="iPhone 16" />
+        <h2>iPhone 16 (256GB - 5G)</h2>
+        <p>₦1,500,000</p>
+        <button onclick="buy('iPhone 16', 1500000)">Buy Now</button>
+      </div>
+    </main>
+  </div>
+  <div class="paymentPage">
+    <div class="checkout">
+      <h2>Complete Your Purchase</h2>
+      <p id="itemInfo"></p>
+      <p id="itemPrice"></p>
+      <p id="sixtyPercent"></p>
+      <form>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <input type="text" placeholder="Home Address" required />
+        <input type="text" placeholder="State" required />
+
+        <div class="bank-info">
+          <p><strong>Pay 60% to:</strong></p>
+          <p>WEMA Bank PLC</p>
+          <p>ACCOUNT NUMBER: <span id="accountNum">9323609916</span>
+            <button class="copy-btn" onclick="copyAcc()">Copy</button>
+          </p>
+          <p>ACCOUNT NAME: WEPERCHTECHNO/INVOX TECHNOX</p>
+        </div>
+        <button class="paid-btn" onclick="confirmPayment(event)">I HAVE PAID</button>  
+      </form>
+
+      <p id="confirmationMsg" style="font-weight:bold; text-align: center;"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
